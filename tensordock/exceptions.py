@@ -1,0 +1,2 @@
+class TensorDockAPIException(Exception):
+    pass
