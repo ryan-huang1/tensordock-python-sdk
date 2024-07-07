@@ -1,10 +1,13 @@
 Metadata-Version: 2.1
 Name: tensordock
-Version: 0.1.0
+Version: 0.1.1
 Summary: A Python SDK for TensorDock API
-Home-page: https://github.com/yourusername/tensordock-python-sdk
+Home-page: https://github.com/ryan-huang1/tensordock-python-sdk
 Author: Ryan Huang
 Author-email: ryan@stdint.com
+Project-URL: Bug Tracker, https://github.com/ryan-huang1/tensordock-python-sdk/issues
+Project-URL: Documentation, https://github.com/ryan-huang1/tensordock-python-sdk/blob/main/DOCS.md
+Project-URL: Source Code, https://github.com/ryan-huang1/tensordock-python-sdk
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
