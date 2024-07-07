@@ -72,3 +72,8 @@ Thumbs.db
 
 # Project specific
 *.log
+
+# Build and distribution folders
+build/
+dist/
+*.egg-info/
