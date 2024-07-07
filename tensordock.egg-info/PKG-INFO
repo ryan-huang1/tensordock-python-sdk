@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tensordock
-Version: 0.1.1
+Version: 0.1.2
 Summary: A Python SDK for TensorDock API
 Home-page: https://github.com/ryan-huang1/tensordock-python-sdk
 Author: Ryan Huang
@@ -20,10 +20,10 @@ This is an unofficial Python SDK for interacting with the TensorDock Marketplace
 
 ## Installation
 
-You can install this unofficial TensorDock Python SDK using pip:
+You can install this TensorDock Python SDK using pip:
 
 ```
-pip install unofficial-tensordock-python-sdk
+pip install tensordock
 ```
 
 ## Configuration
@@ -35,7 +35,7 @@ To use the SDK, you'll need to obtain an API key and token from the TensorDock m
 Here's a quick example of how to use the SDK:
 
 ```python
-from unofficial_tensordock import TensorDockAPI
+from tensordock import TensorDockAPI
 
 # Initialize the API client
 api = TensorDockAPI(api_key='your_api_key', api_token='your_api_token')
@@ -67,11 +67,11 @@ This unofficial SDK aims to provide access to the following TensorDock API endpo
 - Containers
 - Billing
 
-For a full list of features and their implementations, please refer to the source code or the inline documentation.
+For a full list of features and their implementations, please refer to our [detailed documentation](https://github.com/ryan-huang1/tensordock-python-sdk/blob/main/DOCS.md).
 
 ## Documentation
 
-For detailed documentation on each method, please refer to the inline docstrings in the source code. For official API documentation, please visit the [TensorDock API Documentation](https://marketplace.tensordock.com/api).
+For detailed documentation on each method, please refer to our [DOCS.md](https://github.com/ryan-huang1/tensordock-python-sdk/blob/main/DOCS.md) file. For official API documentation, please visit the [TensorDock API Documentation](https://marketplace.tensordock.com/api).
 
 ## Contributing
 
@@ -83,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For issues related to this unofficial SDK, please open an issue on our [GitHub repository](https://github.com/yourusername/unofficial-tensordock-python-sdk).
+For issues related to this unofficial SDK, please open an issue on our [GitHub repository](https://github.com/ryan-huang1/tensordock-python-sdk).
 
 For questions about the TensorDock API itself or for official support, please contact TensorDock directly through their official channels.
 
