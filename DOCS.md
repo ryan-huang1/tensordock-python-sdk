@@ -312,30 +312,79 @@ vms = api.virtual_machines.list_vms()
 
 ```python
 {
-    "success": true,
-    "virtualmachines": {
-        "65e7edca-888a-4e66-a975-2c6cd4cd218b": {
-            "cost": 0.238,
-            "location": "edffaa9d-c4d3-46eb-bdf6-fad125dbeae7",
-            "hostnode": "84352cea-7bc8-4859-8a5c-d173a98ca236",
-            "name": "My RTX 4000 Server",
-            "operating_system": "Ubuntu 20.04 LTS",
-            "port_forwards": {
-                "30117": "80",
-                "30118": "22"
-            },
-            "specs": {
-                "gpu": {
-                    "amount": 1,
-                    "type": "rtxa4000-pcie-16gb"
-                },
-                "ram": 32,
-                "vcpus": 8
-            },
-            "status": "Running",
-            "timestamp_creation": "Sat, 10 Dec 2022 21:38:19 GMT"
-        }
+  "success": true,
+  "virtualmachines": {
+    "vm-001": {
+      "city": "New York",
+      "compute_price": 0.525,
+      "cost": 0.525,
+      "country": "United States",
+      "cpu_threadscount": 16,
+      "dedicated_ip_address": null,
+      "default_user": "user",
+      "hostname": "vm-001-hostname",
+      "hostnode": "hostnode-001",
+      "ip_address": "192.168.1.100",
+      "location": "location-001",
+      "name": "ML Training Server",
+      "operating_system": "Ubuntu 20.04 LTS",
+      "port_forwards": {
+        "20001": "22",
+        "20002": "8888",
+        "20003": "6006"
+      },
+      "specs": {
+        "gpu": {
+          "amount": 1,
+          "type": "rtx3090-pcie-24gb"
+        },
+        "ram": 64,
+        "storage": 500,
+        "vcpus": 16
+      },
+      "state": "New York",
+      "status": "Running",
+      "storage_price": 0.025,
+      "timestamp_creation": "Mon, 03 Jul 2023 12:00:00 GMT",
+      "total_price": 0.55,
+      "type": "ondemand"
+    },
+    "vm-002": {
+      "city": "San Francisco",
+      "compute_price": 0.3,
+      "cost": 0.3,
+      "country": "United States",
+      "cpu_threadscount": 8,
+      "dedicated_ip_address": null,
+      "default_user": "user",
+      "hostname": "vm-002-hostname",
+      "hostnode": "hostnode-002",
+      "ip_address": "192.168.1.101",
+      "location": "location-002",
+      "name": "Web Server",
+      "operating_system": "CentOS 7",
+      "port_forwards": {
+        "20004": "22",
+        "20005": "80",
+        "20006": "443"
+      },
+      "specs": {
+        "gpu": {
+          "amount": 0,
+          "type": null
+        },
+        "ram": 32,
+        "storage": 250,
+        "vcpus": 8
+      },
+      "state": "California",
+      "status": "Stopped",
+      "storage_price": 0.0125,
+      "timestamp_creation": "Tue, 04 Jul 2023 09:30:00 GMT",
+      "total_price": 0.3125,
+      "type": "spot"
     }
+  }
 }
 ```
 
