@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="tensordock",
-    version="0.1.12",  # Increment this if you've made changes
+    version="0.1.13",  # Increment this if you've made changes
     packages=find_packages(),
     install_requires=[
         "requests",

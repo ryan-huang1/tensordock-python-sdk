@@ -149,40 +149,28 @@ class VirtualMachines:
 
         Args:
             **kwargs: Keyword arguments for VM deployment, including:
-                password (str): Password for the VM.
+                api_key (str): API key for authentication.
+                api_token (str): API token for authentication.
+                password (str, optional): Password for the VM. Optional if SSH key is set.
                 ssh_key (str, optional): SSH key for the VM.
-                name (str): Name of the VM.
+                name (str): Name of the VM to be displayed in the dashboard.
                 gpu_count (int): Number of GPUs.
-                gpu_model (str): GPU model.
+                gpu_model (str): GPU model (e.g., "rtxa4000-pcie-16gb").
                 vcpus (int): Number of vCPUs.
                 ram (int): Amount of RAM in GB.
-                external_ports (list): List of external ports.
-                internal_ports (list): List of internal ports.
+                external_ports (str): External ports as a string with curly braces (e.g., "{30118, 30117}").
+                internal_ports (str): Internal ports as a string with curly braces (e.g., "{22, 80}").
                 hostnode (str): UUID of the hostnode.
                 storage (int): Storage amount in GB.
                 operating_system (str): Operating system for the VM.
+                cloudinit_script (str, optional): Cloud-init script.
+                price_type (str, optional): Set to "spot" for spot instance deployment.
+                price (float, optional): Bid amount for spot deployment.
 
         Returns:
             dict: A dictionary containing deployment information.
-
-        Example response:
-            {
-                "cost": {
-                    "compute_price": 0.238,
-                    "storage_price": 0.005,
-                    "total_price": 0.243
-                },
-                "execution_id": 1689,
-                "ip": "mass-a.tensordockmarketplace.com",
-                "port_forwards": {
-                    "30117": "80",
-                    "30118": "22"
-                },
-                "server": "65e7edca-888a-4e66-a975-2c6cd4cd218b",
-                "success": true
-            }
         """
-        return self._make_request('deploy/single', kwargs)
+        return self._make_request('deploy/single', kwargs, method='POST')
 
     def validate_spot_price_new(self, **kwargs):
         """
